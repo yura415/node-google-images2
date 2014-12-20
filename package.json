@@ -1,9 +1,9 @@
 {
-    "name": "google-images"
+    "name": "google-images2"
   , "version": "0.1.0"
   , "description": "Search images using Google Images"
   , "keywords": ["google", "images", "google images", "image search"]
-  , "author": "Vadim Demedes <sbioko@gmail.com>"
+  , "author": "Vadim Demedes <sbioko@gmail.com>, Georgy Chirkov<mail@gich.co>"
   , "dependencies": { "request": "*" }
   , "main": "index"
   , "engines": { "node": ">= 0.4" }

@@ -10,18 +10,26 @@ Install from NPM:
 # Usage
 
 ```
-client = require 'google-images'
+var client = require('google-images');
 
-client.search 'Michael Jackson', (err, images) ->
-	image.writeTo 'path_to_image.extension', -> # image saved to the disk
+client.search('Michael Jackson', function (err, images) { ... });
 
-client.search for: 'Michael Jackson', callback: (err, images) ->
+client.search({ for:'Michael Jackson', callback: function (err, images) { ... } });
 
-client.search for: 'Michael Jackson', page: 2, callback: (err, images) ->
+client.search({ for:'Michael Jackson', page: 2, callback: function (err, images) { ... } });
 
-client.search 'Michael Jackson', page: 2, callback: (err, images) ->
+client.search('Michael Jackson', { page: 2, callback: function (err, images) { ... } });
+
+client.search('Michael Jackson', { page: 2, rawQuery: { safe: 'off', tbs: ['isz:lt', 'islt:qsvga'] } }, callback: function (err, images) { ... } });
+
 
 ```
+
+# Changes
+
+* removed coffescript source
+* added custom parameters support in query (rawQuery param)
+* re-writed usage examples in javascript
 
 # License 
 
